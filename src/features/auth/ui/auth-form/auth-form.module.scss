@@ -1,0 +1,29 @@
+.form {
+  box-sizing: border-box;
+  width: 600px;
+  max-width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 10px;
+  box-shadow: -4px 4px 25px -9px rgba(167, 167, 192, 0.64);
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+
+  &__error {
+    color: $error;
+    align-self: center;
+    font-weight: 500;
+  }
+}

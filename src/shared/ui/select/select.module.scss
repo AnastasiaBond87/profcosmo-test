@@ -1,0 +1,60 @@
+.wrapper {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: $primary_medium;
+}
+
+.btn {
+  outline: 2px solid $primary_medium;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: flex-start;
+  text-transform: none;
+}
+
+.dropdown {
+  padding: 10px 0;
+  border: 1px solid $secondary_medium;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(105%);
+  width: 100%;
+  background: $white;
+  display: none;
+
+  &[data-open="true"] {
+    display: block;
+  }
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: $secondary_light;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $primary_light;
+    }
+  }
+}

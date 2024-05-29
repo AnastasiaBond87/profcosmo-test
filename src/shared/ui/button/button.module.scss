@@ -1,0 +1,44 @@
+.btn {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: normal;
+  font-weight: 500;
+  transition: all 0.3s;
+
+  &:disabled {
+    background: $secondary_medium;
+    color: $secondary;
+    cursor: default;
+    outline: none;
+  }
+
+  &_default {
+    background: none;
+    padding: 0;
+  }
+
+  &_primary {
+    background: $primary;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      background: $primary_medium;
+    }
+  }
+
+  &_secondary {
+    background: $secondary_light;
+    color: $secondary;
+    outline: 1px solid $secondary;
+    outline-offset: -1px;
+
+    &:hover:not(:disabled) {
+      outline-color: $secondary_medium;
+      color: $secondary_medium;
+    }
+  }
+}

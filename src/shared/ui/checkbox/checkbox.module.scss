@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.checkbox {
+  outline: 2px solid $secondary;
+  outline-offset: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &[aria-checked="true"] {
+    outline-color: $success;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: $success;
+}
+
+.label {
+  cursor: pointer;
+}

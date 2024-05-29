@@ -1,0 +1,13 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &__icon {
+    width: 25px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+}

@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  &:focus-within {
+    .label {
+      color: $primary;
+    }
+  }
+
+  &[data-error="true"] {
+    .input {
+      outline-color: $error;
+    }
+
+    .label {
+      color: $error;
+    }
+  }
+}
+
+.input {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid $secondary_medium;
+  outline-offset: -1px;
+  transition: outline 0.1s;
+
+  &::placeholder {
+    font-style: italic;
+  }
+
+  &:focus {
+    outline-color: $primary;
+  }
+}
+
+.label {
+  color: $secondary;
+  font-weight: 500;
+  transition: color 0.1s;
+  pointer-events: none;
+}
+
+.error {
+  color: $error;
+  font-size: 12px;
+}
