@@ -2,6 +2,7 @@
 import { useClickOutside } from '@/shared/hooks';
 import { Button } from '../button';
 import { type Option } from './types';
+import ArrowDown from './assets/arrow-down.svg';
 
 import styles from './select.module.scss';
 
@@ -27,7 +28,8 @@ export const Select = <T,>({ options, selected, onChange, label }: SelectProps<T
       {label && <label className={styles.label}>{label}</label>}
       <div className={styles.select}>
         <Button onClick={toggleOpenSelect} variant="default" className={styles.btn}>
-          {selected?.title ?? ''}
+          <span className={styles.btn__title}>{selected?.title ?? ''}</span>
+          <ArrowDown className={styles.btn__icon} data-open={isOpen} />
         </Button>
         <div className={styles.dropdown} data-open={isOpen}>
           <ul className={styles.options}>
@@ -36,6 +38,7 @@ export const Select = <T,>({ options, selected, onChange, label }: SelectProps<T
                 key={option.title}
                 onClick={() => handleOptionClick(option)}
                 className={styles.options__item}
+                data-active={selected?.value === option.value}
               >
                 {option.title}
               </li>
