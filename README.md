@@ -2,6 +2,7 @@
 
 ```bash
 # clone the repository
+
 git clone https://github.com/AnastasiaBond87/profcosmo-test.git
 
 ```
@@ -17,7 +18,7 @@ npm install
 ```bash
 # run the development server
 
-npm run dev
-# or
 yarn dev
+# or
+npm run dev
 ```
