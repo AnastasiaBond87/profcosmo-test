@@ -9,10 +9,10 @@ export const useClickOutside = <T extends HTMLElement>(onClose?: () => void) => 
       const isClickOutside =
         event.target instanceof HTMLElement && !ref.current?.contains(event.target);
 
-      if (isClickOutside) {
-        setOpen(false);
-        onClose?.();
-      }
+      if (!isClickOutside) return;
+
+      setOpen(false);
+      onClose?.();
     },
     [setOpen, onClose],
   );

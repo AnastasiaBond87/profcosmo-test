@@ -1,4 +1,3 @@
-'use client';
 import { useClickOutside } from '@/shared/hooks';
 import { Button } from '../button';
 import { type Option } from './types';
