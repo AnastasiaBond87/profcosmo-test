@@ -4,10 +4,10 @@ import dynamic from 'next/dynamic';
 import { TasksPagination } from '@/features/paginate-tasks';
 import { LogoutButton } from '@/features/logout';
 import Loader from '@/shared/assets/spinner.svg';
-
-import styles from './page.module.scss';
 import { FilterSelect } from '@/features/filter-tasks';
 import { SortSelect } from '@/features/sort-tasks';
+
+import styles from './page.module.scss';
 
 const Tasks = dynamic(() => import('@/widgets').then((res) => res.Tasks), {
   ssr: false,
@@ -24,8 +24,10 @@ const Home = (): ReactElement => {
         <TaskForm />
         <div className={styles.divider} />
         <div className={styles.actions}>
-          <FilterSelect />
-          <SortSelect />
+          <div className={styles.actions__filter}>
+            <FilterSelect />
+            <SortSelect />
+          </div>
           <TasksPagination />
         </div>
         <div className={styles.divider} />

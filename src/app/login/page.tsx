@@ -4,7 +4,7 @@ import { ReactElement } from 'react';
 import styles from './page.module.scss';
 
 const Login = (): ReactElement => (
-  <div className={styles.wrapper}>
+  <div className={styles.page}>
     <AuthForm />
   </div>
 );

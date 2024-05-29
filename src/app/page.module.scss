@@ -32,6 +32,13 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: flex-end;
   gap: 20px;
   flex-wrap: wrap;
+
+  &__filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
